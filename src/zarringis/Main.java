@@ -12,15 +12,19 @@ public class Main {
         char sym1 = '*';
         char escCode = 0x1B;
 
-        System.out.print(String.format("%c[%d;%df",escCode,x1,y1)); //ставим курсор
-        System.out.print(sym1); // печатаем символ
+        Draw(x1, y1, sym1);
 
         int x2 = 3;
         int y2 = 4;
         char sym2 = '#';
 
-        System.out.print(String.format("%c[%d;%df",escCode,x2,y2));
-        System.out.print(sym2);
+        Draw(x2, y2, sym2);
+    }
+    static void Draw(int x, int y, char sym)
+    {
+        char escCode = 0x1B;
+        System.out.print(String.format("%c[%d;%df",escCode,x,y)); //ставит курсор на экране
+        System.out.print(sym); //рисует символ
     }
 
 }
