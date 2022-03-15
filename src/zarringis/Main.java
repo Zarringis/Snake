@@ -5,20 +5,19 @@ import java.io.Console;
 public class Main {
 
     public static void main(String[] args) {
-
-        System.out.println("Hello, Snake");
-        int x1 = 2;
-        int y1 = 3;
-        char sym1 = '*';
+        Point p1 = new Point();
+        p1.x = 2;
+        p1.y= 3;
+        p1.sym = '*';
         char escCode = 0x1B;
 
-        Draw(x1, y1, sym1);
+        Draw(p1.x, p1.y, p1.sym);
 
-        int x2 = 3;
+        /*int x2 = 3;
         int y2 = 4;
-        char sym2 = '#';
+        char sym2 = '#';*/
 
-        Draw(x2, y2, sym2);
+        //Draw(x2, y2, sym2);
     }
     static void Draw(int x, int y, char sym)
     {
