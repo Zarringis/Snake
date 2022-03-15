@@ -6,7 +6,13 @@ public class Point
       public  int x;
       public int y;
       public char sym;
-      char escCode = 0x1B;
+
+      public void Draw()
+      {
+          char escCode = 0x1B;
+          System.out.print(String.format("%c[%d;%df",escCode,x,y)); //ставит курсор на экране
+          System.out.print(sym); //рисует символ
+      }
 
 
     }

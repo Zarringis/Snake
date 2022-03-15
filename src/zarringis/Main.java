@@ -9,21 +9,19 @@ public class Main {
         p1.x = 2;
         p1.y= 3;
         p1.sym = '*';
-        char escCode = 0x1B;
 
-        Draw(p1.x, p1.y, p1.sym);
 
-        /*int x2 = 3;
-        int y2 = 4;
-        char sym2 = '#';*/
+        p1.Draw();
 
-        //Draw(x2, y2, sym2);
+        Point p2 = new Point();
+        p2.x = 4;
+        p2.y= 5;
+        p2.sym = '#';
+
+        p2.Draw();
+
     }
-    static void Draw(int x, int y, char sym)
-    {
-        char escCode = 0x1B;
-        System.out.print(String.format("%c[%d;%df",escCode,x,y)); //ставит курсор на экране
-        System.out.print(sym); //рисует символ
-    }
+
+
 
 }
