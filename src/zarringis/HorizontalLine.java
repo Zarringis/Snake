@@ -5,14 +5,13 @@ import java.util.ArrayList;
 public class HorizontalLine {
     ArrayList<Point> plist;
 
-    public HorizontalLine() {
+    public HorizontalLine(int x, int yLeft, int yRight, char sym) {
         plist = new ArrayList<Point>();
-        Point p1 = new Point(5, 4, '*');
-        Point p2 = new Point(5, 5, '*');
-        Point p3 = new Point(5, 6, '*');
-        plist.add(p1);
-        plist.add(p2);
-        plist.add(p3);
+        for (int y = yLeft; y <= yRight; y++){
+            Point p = new Point(x, y, sym);
+            plist.add(p);
+        }
+
     }
 
     public void draw() {

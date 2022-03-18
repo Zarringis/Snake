@@ -14,7 +14,7 @@ public class Main {
         Point p2 = new Point(4, 5, '#');
         p2.draw();
 
-        HorizontalLine line = new HorizontalLine();
+        HorizontalLine line = new HorizontalLine(8,5, 10, '+');
         line.draw();
 
     }
