@@ -17,6 +17,9 @@ public class Main {
         HorizontalLine line = new HorizontalLine(8,5, 10, '+');
         line.draw();
 
+        VerticalLine line1 = new VerticalLine(8, 13, 5, '+');
+        line1.draw();
+
     }
 
 
