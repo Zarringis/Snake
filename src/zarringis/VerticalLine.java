@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class VerticalLine {
     ArrayList<Point> plist;
 
-    public VerticalLine(int xTop, int xBottom, int y, char sym) {
+    public VerticalLine(int xUp, int xDown, int y, char sym) {
         plist = new ArrayList<Point>();
-        for (int x = xTop; x <= xBottom; x++){
+        for (int x = xUp; x <= xDown; x++){
             Point p = new Point(x, y, sym);
             plist.add(p);
         }
