@@ -2,8 +2,7 @@ package zarringis;
 
 import java.util.ArrayList;
 
-public class HorizontalLine {
-    ArrayList<Point> plist;
+public class HorizontalLine extends Figure {
 
     public HorizontalLine(int x, int yLeft, int yRight, char sym) {
         plist = new ArrayList<Point>();
@@ -14,11 +13,6 @@ public class HorizontalLine {
 
     }
 
-    public void draw() {
-        for (Point p : plist) {
-            p.draw();
-        }
-    }
 
 
 }
