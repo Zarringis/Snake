@@ -10,26 +10,18 @@ public class Main {
         SetConsoleScreenBufferSize(30, 85);
 
         //отрисовка рамки
-        HorizontalLine upLine = new HorizontalLine(8, 3, 80, '=');
-        HorizontalLine downLine = new HorizontalLine(28, 3, 80, '=');
-        VerticalLine leftLine = new VerticalLine(8, 28, 3, '+');
-        VerticalLine rightLine = new VerticalLine(8, 28, 80, '+');
+        HorizontalLine upLine = new HorizontalLine(5, 3, 80, '+');
+        HorizontalLine downLine = new HorizontalLine(28, 3, 80, '+');
+        VerticalLine leftLine = new VerticalLine(5, 28, 3, '+');
+        VerticalLine rightLine = new VerticalLine(5, 28, 80, '+');
         upLine.draw();
         downLine.draw();
         leftLine.draw();
         rightLine.draw();
 
-        Point p1 = new Point(9, 9, '*');
-        p1.draw();
-
-        Point p2 = new Point(4, 15, '#');
-        p2.draw();
-
-        //HorizontalLine line = new HorizontalLine(8, 5, 10, '+');
-
-       // VerticalLine line1 = new VerticalLine(8, 13, 5, '+');
-
-
+        Point p = new Point(9, 5, '*');
+        Snake snake = new Snake(p, 4, Direction.RIGHT);
+        snake.draw();
     }
 
     private static void SetConsoleScreenBufferSize(int i, int i1) {

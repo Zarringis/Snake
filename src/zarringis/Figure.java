@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Figure {
 
-   protected ArrayList<Point> plist; //pList была видна у наследников
+   protected ArrayList<Point> pList; //pList была видна у наследников
     public void draw() {
-        for (Point p : plist) {
+        for (Point p : pList) {
             p.draw();
         }
     }
