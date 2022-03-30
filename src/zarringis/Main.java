@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         SetConsoleScreenBufferSize(30, 85);
 
         //отрисовка рамки
@@ -22,6 +22,14 @@ public class Main {
         Point p = new Point(9, 5, '*');
         Snake snake = new Snake(p, 4, Direction.RIGHT);
         snake.draw();
+        snake.move();
+        Thread.sleep (1000);
+        snake.move();
+        Thread.sleep (1000);
+        snake.move();
+        Thread.sleep (1000);
+        snake.move();
+        Thread.sleep (1000);
     }
 
     private static void SetConsoleScreenBufferSize(int i, int i1) {

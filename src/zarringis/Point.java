@@ -19,7 +19,7 @@ public class Point
           sym = p.sym;
       }
 
-      public void Move(int offset, Direction direction){
+      public void move(int offset, Direction direction){
           if(direction == Direction.RIGHT){
               y = y + offset;}
           else if(direction == Direction.LEFT){
@@ -32,11 +32,17 @@ public class Point
 
       }
 
+
       public void draw()
       {
           char escCode = 0x1B;
           System.out.print(String.format("%c[%d;%df",escCode,x,y)); //ставит курсор на экране
           System.out.print(sym); //рисует символ
+      }
+
+      public void clear(){
+          sym = ' ';
+          draw();
       }
 
 
